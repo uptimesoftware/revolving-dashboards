@@ -1,24 +1,18 @@
-1. Edit the file <uptime_dir>\GUI\ack\ack.php by providing the following:
+To complete installation of the Page Rotator, follow the steps below.
+Make sure you read all the steps first before clicking away from this screen!
 
-///////////////////////////////////////////////////////////////
-// up.time username and password settings for the acknowledgement to function
-$user            = 'admin';
-$pass            = 'admin';
-$uptime_hostname = 'uptimeserver.company.com';
-///////////////////////////////////////////////////////////////
+1. Copy the following text:
+globalscan.custom.tab.enabled=true
+globalscan.custom.tab.name=CCTV Page Rotator
+globalscan.custom.tab.URL=/Page_Rotator/
 
-	...where $user & $pass is the credential used to acknowledge the alert.  
-	   $uptime_hostname is the up.time monitoring station
+2. Click on the tab: Config > up.time Configuration
 
-2. Configure Alert Profile
+3. Paste the text into the textbox and click the Update button.
 
-Edit an alert profile and include the following link:
+That's it! Now go to GlobalScan and check out the new tab that shows up there.
 
-	http://<UPTIME_HOSTNAME>/ack/ack.php?host=$HOSTNAME$&monitor=$SERVICENAME$&status=$SERVICESTATE$&msg=$OUTPUT$
 
-Note: Substitute "<UPTIME_HOSTNAME>" for the external IP/hostname of the up.time interface (the other values should not be modified; they will be updated when the alert profile is triggered).
-You can also place it on an external web server if required.
-
-If the monitor name and/or alert message have spaces, one should also install the Enhanced Alert Profile Variables (http://support.uptimesoftware.com/the-grid/mod_view.php?mod_id=6&version_id=138).  Replace the above URL in the alert profile with the following:
-
-	http://<UPTIME_HOSTNAME>/ack/ack.php?host=$HOSTNAME$&monitor=$URLSERVICENAME$&status=$SERVICESTATE$&msg=$URLOUTPUT$
+To edit the rotator (adjust refresh frequency, add/remove/change pages to load),
+you can edit the html file located in:
+<uptime_dir>\GUI\Page_Rotator\index.html
