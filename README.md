@@ -1,7 +1,7 @@
 # Revolving Dashboards (Page Rotator)
 
-See http://uptimesoftware.github.io for more information. 
- 
+This has been replaced by the [Rotating Dashboard Gadget](https://github.com/uptimesoftware/uptime-RotatingDashboard-Gadget) for up.time 7.3 and later.
+
 To complete installation of the Revolving Dashboards (Page Rotator) plugin after installing it with the Plugin Manager, follow the steps below.
 
 1. Copy the following text:
